@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Parisienne&family=Poppins:wght@200&display=swap');
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+/*────────────────── 
+        body
+──────────────────*/
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+    font-weight: 100;
+    color: #f5eeff;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient( 45deg, #182952, #523d6e);
+    background: -webkit-linear-gradient( 45deg, #182952, #523d6e);
+}
+
+/*────────────────── 
+       header
+──────────────────*/
+
+
+header{
+    width: 100%;
+    height: 40%;
+    position: relative;
+    background: url("/images/img.jpg");
+    background-position: center;
+    background-size:cover;
+    box-shadow: 0px 0px 10px #182952;
+}
+
+/* list name */
+
+#list-title{
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    border: hidden;
+    font-size: 40px;
+    color: #fefefe;
+    background: transparent;
+    text-transform: capitalize;
+}
+
+input::placeholder{
+    color: #fefefe;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+input:focus{
+    outline-color: rgba(255, 255, 255, 0.726);
+}
+
+/* delete list button */
+
+header i{
+    top: 20px;
+    right: 40px;
+    font-size: 1.5rem;
+    position: absolute;
+    animation: close 1s 1 ease-out;
+}
+
+.heading i:hover{
+    color: pink;
+    font-size: 2rem;
+}
+
+@keyframes close{
+    0%{transform: rotate(-90deg);}
+    50%{transform: rotate(0deg);}
+}
+
+/*────────────────── 
+    content area
+──────────────────*/
+
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 60%;
+}
+
+/* list */
+
+#list{
+    padding: 20px 40px;
+    font-size: 1.2em;
+}
+
+#list i:hover{
+    color: rgb(248, 128, 168);
+}
+
+/* item */
+
+.item{
+    position: relative;
+    margin-top: 10px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.item:hover{
+    box-shadow: 0px 0px 5px #b27af36b; 
+}
+
+.item p{
+    position: relative;
+    flex-grow: 1;
+    padding-left: 20px;
+    animation: slide .30s 1 ease-out;
+}
+
+@keyframes slide{
+    0%   {left: -10px; opacity: .4;}
+  50%  { left: 0px; opacity: 1;}
+}
+
+
+.line-through{
+    text-decoration: line-through;
+}
+
+/*────────────────── 
+    user input 
+──────────────────*/
+
+#input{
+    position: relative;
+    outline: none;
+    padding: 10px 15px;
+    color: #f5eeff;
+    font-size: 1.2em;
+    border-radius: 5px;
+    background: transparent;
+    border: 3px solid #f5eeff;
+    animation: slide 1s 1 ease-out;
+}
+
+ 
+/* add item */
+
+#add{
+    display: flex;
+    align-items: center;
+    margin: 20px 40px;
+    padding: 5px 12px;
+}
+
+/* plus button */
+
+#add i{
+    font-size: 2.5em;
+    margin-right:20px;
+}
+
+/*────────────────── 
+    media query    
+──────────────────*/
+
+@media only screen and (max-width: 600px) {
+   #add{
+       justify-content: center;
+   }
+   #list-title{
+       width: 300px;
+   }
+}
